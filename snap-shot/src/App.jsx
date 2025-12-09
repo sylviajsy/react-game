@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { Form } from 'react-bootstrap';
+import { Form, Button,InputGroup } from 'react-bootstrap';
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -13,11 +13,16 @@ function App() {
       <h1>Photo Snap</h1>
       <div className='search-section'>
         <Form>
-          {/* <Input> giving styling */}
-          <Form.Control 
-          type='search'
-          placeholder='Search Anything ...'
-          ref={searchInput}/>
+          <InputGroup>
+            {/* <Input> giving styling */}
+            <Form.Control 
+              type='search'
+              placeholder='Search Anything ...'
+              ref={searchInput}/>
+            <Button type="submit">
+              Search
+            </Button>
+          </InputGroup>
         </Form>
       </div>
     </div>
