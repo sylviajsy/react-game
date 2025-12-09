@@ -1,15 +1,15 @@
 import { useState } from 'react'
 import './App.css'
+import Nav from './components/nav'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-      <div>
-        <h1>
-          Image Search APP
-        </h1>
-      </div>
+    <div className='w-screen'>
+      <Nav />
+    </div>
+        
   )
 }
 
