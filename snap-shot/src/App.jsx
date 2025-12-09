@@ -7,12 +7,13 @@ function App() {
   const [image, setImage] = useState([]);
 
   const fetchData = async(searchTerm) => {
-    const access_key = import .meta.env.UNSPLASH_ACCESS_KEY;
+    const access_key = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
     try {
       const response = await fetch(
         `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchTerm}`
       );
       const data = await response.json();
+      console.log("API data:", data);
       setImage(data);
     } catch (error){
       console.warn(error);
@@ -23,7 +24,7 @@ function App() {
     <div className='Container'>
       <h1>Photo Snap</h1>
       <div className='search-section'>
-        <SearchFiled />
+        <SearchFiled onSubmit={fetchData}/>
       </div>
     </div>
   )
