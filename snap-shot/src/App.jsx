@@ -2,13 +2,16 @@ import { useState } from 'react'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SearchFiled from './components/SearchFiled';
+import SearchResult from './components/SearchResult';
 import PhotoCard from './components/PhotoCard';
 
 function App() {
+  const [word, setWord] = useState("")
   const [image, setImage] = useState([]);
 
   const fetchData = async(searchTerm) => {
     const access_key = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
+    setWord(searchTerm);
     try {
       const response = await fetch(
         `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchTerm}`
@@ -27,6 +30,7 @@ function App() {
       <div className='search-section'>
         <SearchFiled onSubmit={fetchData}/>
       </div>
+      <SearchResult searchWord = {word}/>
       <div className="row">
           {image.map((images) => (
             <PhotoCard
