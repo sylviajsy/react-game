@@ -2,28 +2,16 @@ import { useRef, useState } from 'react'
 import { Form, Button,InputGroup } from 'react-bootstrap';
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import SearchFiled from './components/SearchFiled';
 
 function App() {
   const [count, setCount] = useState(0)
-  // useRef is a React hook that allows you to directly access a DOM element (like an input field) 
-  // to get its value without triggering a component re-render.
-  const searchInput = useRef(null);
+  
   return (
     <div className='Container'>
       <h1>Photo Snap</h1>
       <div className='search-section'>
-        <Form>
-          <InputGroup>
-            {/* <Input> giving styling */}
-            <Form.Control 
-              type='search'
-              placeholder='Search Anything ...'
-              ref={searchInput}/>
-            <Button type="submit">
-              Search
-            </Button>
-          </InputGroup>
-        </Form>
+        <SearchFiled />
       </div>
     </div>
   )
