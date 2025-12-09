@@ -1,19 +1,23 @@
 import { useState } from 'react'
-import './App.css'
-import Header from './components/Header'
-import SearchField from './components/SearchField'
-import Images from './components/Images'
+import { Form } from 'react-bootstrap';
+import './index.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <Header>
-        <SearchField />
-      </Header>
-      <Images />
-    </>
+    <div className='Container'>
+      <h1>Photo Snap</h1>
+      <div className='search-section'>
+        <Form>
+          {/* Input */}
+          <Form.Control 
+          type='search'
+          placeholder='Search Anything ...'/>
+        </Form>
+      </div>
+    </div>
   )
 }
 
