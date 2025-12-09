@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SearchFiled from './components/SearchFiled';
+import PhotoCard from './components/PhotoCard';
 
 function App() {
   const [image, setImage] = useState([]);
@@ -26,6 +27,15 @@ function App() {
       <div className='search-section'>
         <SearchFiled onSubmit={fetchData}/>
       </div>
+      <div className="row">
+          {image.map((images) => (
+            <PhotoCard
+              key={images.id}
+              src={images.urls.small}
+              alt={images.alt_description}
+          />))}
+      </div>
+      
     </div>
   )
 }
