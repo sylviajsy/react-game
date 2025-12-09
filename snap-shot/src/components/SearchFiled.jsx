@@ -14,7 +14,7 @@ const SearchFiled = ({ onSubmit }) => {
   return (
     <Form onSubmit={handleSearch}>
         <InputGroup>
-        {/* <Input> giving styling */}
+        {/* like <Input>, styling */}
         <Form.Control 
             type='search'
             placeholder='Search Anything ...'
