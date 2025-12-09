@@ -9,7 +9,7 @@ const PhotoCard = ({ src, alt }) => {
           variant="top" 
           src={src} 
           alt={alt}
-          style={{ height: '200px', objectFit: 'cover' }} 
+          style={{ height: '300px', objectFit: 'cover' }} 
         />
       </Card>
     </Col>

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import SearchFiled from './components/SearchFiled';
+import SearchField from './components/SearchField';
 import SearchCount from './components/SearchCount';
 import SearchResult from './components/SearchResult';
 import PhotoCard from './components/PhotoCard';
@@ -31,7 +31,7 @@ function App() {
     <div className='Container'>
       <h1>Photo Snap</h1>
       <div className='search-section'>
-        <SearchFiled onSubmit={fetchData}/>
+        <SearchField onSubmit={fetchData}/>
       </div>
       <SearchCount count={count}/>
       <SearchResult searchWord = {word}/>
