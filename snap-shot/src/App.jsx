@@ -14,7 +14,7 @@ function App() {
       );
       const data = await response.json();
       console.log("API data:", data);
-      setImage(data);
+      setImage(data.results);
     } catch (error){
       console.warn(error);
     }
