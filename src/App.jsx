@@ -36,7 +36,7 @@ function App() {
         <SearchField onSubmit={fetchData}/>
       </div>
       {word && <SearchCount count={count}/>}
-      <SearchResult searchWord = {word}/>
+      {word && <SearchResult searchWord = {word}/>}
       <div className="row">
           {image.map((images) => (
             <PhotoCard
