@@ -46,9 +46,9 @@ function App() {
           />))}
       </div>
       
-      <PageButton 
+      {word && <PageButton 
                   onNext={()=>fetchData(word, page+1)} 
-                  onPrev={()=>fetchData(word, page-1)} />
+                  onPrev={()=>fetchData(word, page-1)} />}
 
     </div>
   )
