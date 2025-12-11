@@ -10,11 +10,13 @@ function App() {
   const [word, setWord] = useState("")
   const [image, setImage] = useState([]);
   const [count, setCount] = useState(0);
+  const [page, setPage] = useState(1);
 
   const fetchData = async(searchTerm) => {
     const access_key = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
     setWord(searchTerm);
     setCount(prevCount => prevCount+1);
+
     try {
       const response = await fetch(
         `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchTerm}`
@@ -33,7 +35,7 @@ function App() {
       <div className='search-section'>
         <SearchField onSubmit={fetchData}/>
       </div>
-      <SearchCount count={count}/>
+      {word && <SearchCount count={count}/>}
       <SearchResult searchWord = {word}/>
       <div className="row">
           {image.map((images) => (
