@@ -8,7 +8,7 @@ import PhotoCard from './components/PhotoCard';
 import PageButton from './components/PageButton';
 
 function App() {
-  const [word, setWord] = useState("")
+  const [word, setWord] = useState('')
   const [image, setImage] = useState([]);
   const [count, setCount] = useState(0);
   const [page, setPage] = useState(1);
@@ -33,11 +33,11 @@ function App() {
   
   return (
     <div className='Container'>
-      <h1>Photo Snap</h1>
+      <h1 className='text-center app-title'>Photo Snap 📸</h1>
       <SearchField onSubmit={fetchData}/>
       {word && <SearchCount count={count}/>}
       {word && <SearchResult searchWord = {word}/>}
-      <div className="row">
+      <div className='row'>
           {image.map((images) => (
             <PhotoCard
               key={images.id}
