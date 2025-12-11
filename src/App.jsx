@@ -34,7 +34,10 @@ function App() {
   return (
     <div className='Container'>
       <h1 className='text-center app-title'>Photo Snap 📸</h1>
-      <SearchField onSubmit={fetchData}/>
+      <div className='search-wrapper'>
+        <SearchField onSubmit={fetchData}/>
+      </div>
+      
       {word && <SearchCount count={count}/>}
       {word && <SearchResult searchWord = {word}/>}
       <div className='row'>

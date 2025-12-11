@@ -8,3 +8,8 @@ body {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
+.search-wrapper {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+}
