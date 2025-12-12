@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './index.css'
+import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SearchField from './components/SearchField';
 import SearchCount from './components/SearchCount';
@@ -13,7 +14,7 @@ function App() {
   const [count, setCount] = useState(0);
   const [page, setPage] = useState(1);
 
-  const fetchData = async(searchTerm, pageNum) => {
+  const fetchData = async(searchTerm, pageNum=1) => {
     const access_key = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
     setWord(searchTerm);
     setCount(prevCount => prevCount+1);
