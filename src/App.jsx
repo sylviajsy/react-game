@@ -38,10 +38,11 @@ function App() {
         <div className='search-wrapper'>
           <SearchField onSubmit={fetchData}/>
         </div>
+        <div className="text-center">
+          {word && <SearchCount count={count}/>}
+        </div>
+        
       </div>
-      
-      
-      {word && <SearchCount count={count}/>}
       {word && <SearchResult searchWord = {word}/>}
       <div className='row'>
           {image.map((images) => (
