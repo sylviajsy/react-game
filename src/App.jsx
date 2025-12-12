@@ -42,7 +42,8 @@ function App() {
           {word && <SearchCount count={count}/>}
         </div>
       </div>
-      <div className="text-center">
+
+      <div className="text-center mt-3 mb-3">
         {word && <SearchResult searchWord = {word}/>}
       </div>
       
