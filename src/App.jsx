@@ -41,9 +41,11 @@ function App() {
         <div className="text-center">
           {word && <SearchCount count={count}/>}
         </div>
-        
       </div>
-      {word && <SearchResult searchWord = {word}/>}
+      <div className="text-center">
+        {word && <SearchResult searchWord = {word}/>}
+      </div>
+      
       <div className='row'>
           {image.map((images) => (
             <PhotoCard
