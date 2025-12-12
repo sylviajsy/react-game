@@ -33,10 +33,13 @@ function App() {
   
   return (
     <div className='Container'>
-      <h1 className='text-center app-title'>Photo Snap 📸</h1>
-      <div className='search-wrapper'>
-        <SearchField onSubmit={fetchData}/>
+      <div className='header-hero'>
+        <h1 className='text-center app-title'>Photo Snap 📸</h1>
+        <div className='search-wrapper'>
+          <SearchField onSubmit={fetchData}/>
+        </div>
       </div>
+      
       
       {word && <SearchCount count={count}/>}
       {word && <SearchResult searchWord = {word}/>}
