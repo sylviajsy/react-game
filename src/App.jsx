@@ -53,6 +53,7 @@ function App() {
       </div>
       
       {word && <PageButton 
+                  page = {page}
                   onNext={()=>fetchData(word, page+1)} 
                   onPrev={()=>fetchData(word, page-1)} />}
 

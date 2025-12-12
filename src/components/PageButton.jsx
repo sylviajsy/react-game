@@ -1,12 +1,12 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 
-const PageButton = ({ onNext, onPrev }) => {
+const PageButton = ({ page, onNext, onPrev }) => {
   return (
     <div>
-        <button onClick={onPrev}>
+        {page>1 && <button onClick={onPrev}>
             Prev
-        </button>
+        </button>}
 
         <button onClick={onNext}>
             Next
