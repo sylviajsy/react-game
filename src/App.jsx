@@ -58,13 +58,12 @@ function App() {
                 alt={images.alt_description}
             />))}
         </div>
-      </Container>
       
       {word && <PageButton 
                   page = {page}
                   onNext={()=>fetchData(word, page+1)} 
                   onPrev={()=>fetchData(word, page-1)} />}
-
+    </Container>
     </div>
   )
 }
