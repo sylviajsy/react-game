@@ -7,6 +7,7 @@ import SearchCount from './components/SearchCount';
 import SearchResult from './components/SearchResult';
 import PhotoCard from './components/PhotoCard';
 import PageButton from './components/PageButton';
+import { Container } from 'react-bootstrap';
 
 function App() {
   const [word, setWord] = useState('')
@@ -22,7 +23,7 @@ function App() {
 
     try {
       const response = await fetch(
-        `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchTerm}&page=${pageNum}`
+        `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchTerm}&page=${pageNum}&per_page=12`
       );
       const data = await response.json();
       console.log("API data:", data);
@@ -48,14 +49,16 @@ function App() {
         {word && <SearchResult searchWord = {word}/>}
       </div>
       
-      <div className='row'>
-          {image.map((images) => (
-            <PhotoCard
-              key={images.id}
-              src={images.urls.small}
-              alt={images.alt_description}
-          />))}
-      </div>
+      <Container>
+        <div className='row'>
+            {image.map((images) => (
+              <PhotoCard
+                key={images.id}
+                src={images.urls.small}
+                alt={images.alt_description}
+            />))}
+        </div>
+      </Container>
       
       {word && <PageButton 
                   page = {page}
