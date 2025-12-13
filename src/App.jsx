@@ -85,3 +85,6 @@ export default App
 // 3. Photos found successfully
 // 4. No result found
 
+// Like/fav the photo by adding a db/local storage
+// User accounts
+// API offers other endpoints

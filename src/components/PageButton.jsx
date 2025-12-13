@@ -3,13 +3,15 @@ import { Button } from 'react-bootstrap'
 
 const PageButton = ({ page, onNext, onPrev }) => {
   return (
-    <div>
-        {page>1 && <button onClick={onPrev}>
-            Prev
-        </button>}
+    <div className="d-flex justify-content-between mb-4">
+        {page>1 ?(
+          <button onClick={onPrev}>
+            &larr; Prev
+          </button>):
+       ( <div />)}
 
         <button onClick={onNext}>
-            Next
+            Next &rarr;
         </button>
     </div>
     
