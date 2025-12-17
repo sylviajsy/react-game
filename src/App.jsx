@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './index.css'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -32,6 +32,9 @@ function App() {
       console.warn(error);
     }
   }
+
+  useEffect(() =>
+    {fetchData()},[])
   
   return (
     <div className='Container'>
@@ -85,6 +88,5 @@ export default App
 // 3. Photos found successfully
 // 4. No result found
 
-// Like/fav the photo by adding a db/local storage
-// User accounts
-// API offers other endpoints
+// Why search times is 3 after first search
+// Why use useEffect
