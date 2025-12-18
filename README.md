@@ -4,6 +4,8 @@ A fast, responsive React photo gallery that lets users search and explore images
 # 📖 About The Project
 Photo Snap is a **React-based** photo gallery application that allows users to search and browse high-quality images using the **Unsplash API**.
 
+<img width="1211" height="664" alt="Screenshot 2025-12-18 at 1 21 15 AM" src="https://github.com/user-attachments/assets/229548f7-2e96-4b8b-addf-165579d7cc63" />
+
 ## 🚀 How To Run
 1. **Clone the [repository](https://github.com/sylviajsy/react-game)**:
   ```bash
