@@ -13,6 +13,9 @@ Photo Snap is a **React-based** photo gallery application that allows users to s
 4. Results are displayed in a responsive grid layout
 5. Users can perform new searches without refreshing the page
 
+
+
+
 ## 🚀 How To Run
 1. **Clone the [repository](https://github.com/sylviajsy/react-game)**:
   ```bash
@@ -35,4 +38,12 @@ Photo Snap is a **React-based** photo gallery application that allows users to s
   ```bash
     npm run dev
   ````
-6. You will see `Local: http://localhost:5173/` in terminal, right click it. The game will launch automatically in your default browser  
+6. You will see `Local: http://localhost:5173/` in terminal, right click it. The game will launch automatically in your default browser
+
+# 🛠️ Tech Stack
+- React.js
+- React Hooks: `useState`, `useEffect`
+- CSS3 (Grid, Flexbox)
+- Unsplash REST API
+- Build Tool: Vite 
+
