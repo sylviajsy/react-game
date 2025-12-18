@@ -26,8 +26,13 @@ Photo Snap is a **React-based** photo gallery application that allows users to s
    ```bash
     npm install
    ```
-4. **Run locally**:
+4. **Set up environment variables**:
+  Create a `.env` file in the root directory:
+  ```bash
+  VITE_UNSPLASH_ACCESS_KEY=your_unsplash_access_key
+  ```
+5. **Run locally**:
   ```bash
     npm run dev
   ````
-5. You will see `Local: http://localhost:5173/` in terminal, right click it. The game will launch automatically in your default browser  
+6. You will see `Local: http://localhost:5173/` in terminal, right click it. The game will launch automatically in your default browser  
