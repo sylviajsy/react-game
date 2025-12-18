@@ -6,6 +6,12 @@ Photo Snap is a **React-based** photo gallery application that allows users to s
 
 <img width="1211" height="664" alt="Screenshot 2025-12-18 at 1 21 15 AM" src="https://github.com/user-attachments/assets/229548f7-2e96-4b8b-addf-165579d7cc63" />
 
+This project was built as part of my Techtonica learning journey to practice:
+- Component-based design in React
+- Working with external APIs
+- Managing application state and side effects
+- Building responsive, user-friendly interfaces
+
 # 🔍 How the App Works
 1. The user enters a keyword into the search bar
 2. The app sends a request to the Unsplash API
