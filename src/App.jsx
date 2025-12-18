@@ -32,7 +32,8 @@ function App() {
       console.warn(error);
     }
   }
-
+  
+  // useEffect is used to handle initial data fetching and side effects
   useEffect(() =>
     {fetchData()},[])
   
