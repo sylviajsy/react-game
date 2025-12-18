@@ -11,9 +11,13 @@ Photo Snap is a **React-based** photo gallery application that allows users to s
 2. The app sends a request to the Unsplash API
 3. Matching photos are fetched asynchronously
 4. Results are displayed in a responsive grid layout
-5. Users can perform new searches without refreshing the page
+5. Pagination buttons allow navigating through result pages
+6. Users can perform new searches without refreshing the page
 
-
+# ✨ Features
+- **Search Functionality**: Users can search photos by keyword (e.g. dogs, nature, sunsets).
+- **Unsplash API Integration**: Fetches real-time image data from the Unsplash REST API.
+- **Component-Based UI Design**: The main application state and API logic are managed in the App component, while UI responsibilities are delegated to smaller presentational components.
 
 
 ## 🚀 How To Run
