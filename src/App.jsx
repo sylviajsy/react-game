@@ -9,11 +9,14 @@ import PhotoCard from './components/PhotoCard';
 import PageButton from './components/PageButton';
 import { Container } from 'react-bootstrap';
 
+const EXPIRATION_TIME = 10*1000
+
 function App() {
   const [word, setWord] = useState('')
   const [image, setImage] = useState([]);
   const [count, setCount] = useState(0);
   const [page, setPage] = useState(1);
+  const [time, setTime] = useState(null);
 
   const fetchData = async(searchTerm, pageNum=1) => {
     const access_key = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
@@ -32,17 +35,31 @@ function App() {
       console.warn(error);
     }
   }
-  
+
   // useEffect is used to handle initial data fetching and side effects
-  useEffect(() =>
-    {fetchData()},[])
+  useEffect(() => {
+    fetchData()
+  },[])
+
+  const handleTimer = (searchTerm) => {
+    const now = Date.now();
+
+    if(!time || now-time>EXPIRATION_TIME){
+      setTime(now);
+      setCount(1);
+    } else {
+      setCount(c => c + 1);
+    }
+
+    fetchData(searchTerm);
+  }
   
   return (
     <div className='Container'>
       <div className='header-hero'>
         <h1 className='text-center app-title'>Photo Snap 📸</h1>
         <div className='search-wrapper'>
-          <SearchField onSubmit={fetchData}/>
+          <SearchField onSubmit={handleTimer}/>
         </div>
         <div className="text-center">
           {word && <SearchCount count={count}/>}
