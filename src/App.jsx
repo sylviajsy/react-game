@@ -30,7 +30,7 @@ function App() {
         `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchTerm}&page=${pageNum}&per_page=12`
       );
       const data = await response.json();
-      console.log("API data:", data);
+      // console.log("API data:", data);
       setImage(data.results);
     } catch (error){
       console.warn(error);
