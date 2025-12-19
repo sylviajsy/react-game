@@ -17,6 +17,7 @@ function App() {
   const [count, setCount] = useState(0);
   const [page, setPage] = useState(1);
   const [time, setTime] = useState(null);
+  const [hasSearched, setHasSearched] = useState(false);
 
   const fetchData = async(searchTerm, pageNum=1) => {
     const access_key = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
@@ -38,17 +39,18 @@ function App() {
 
   // useEffect is used to handle initial data fetching and side effects
   useEffect(() => {
-    fetchData()
+    fetchData("nature")
   },[])
 
   const handleTimer = (searchTerm) => {
     const now = Date.now();
+    setHasSearched(true);
 
     if(!time || now-time>EXPIRATION_TIME){
       setTime(now);
       setCount(1);
     } else {
-      setCount(c => c + 1);
+      console.log(now);
     }
 
     fetchData(searchTerm);
@@ -62,12 +64,12 @@ function App() {
           <SearchField onSubmit={handleTimer}/>
         </div>
         <div className="text-center">
-          {word && <SearchCount count={count}/>}
+          {hasSearched && <SearchCount count={count}/>}
         </div>
       </div>
 
       <div className="text-center mt-3 mb-3">
-        {word && <SearchResult searchWord = {word}/>}
+        {hasSearched && <SearchResult searchWord = {word}/>}
       </div>
       
       <Container>

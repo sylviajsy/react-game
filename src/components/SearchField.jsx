@@ -9,7 +9,7 @@ const SearchField = ({ onSubmit }) => {
 
     const handleSearch = (event) => {
       event.preventDefault();
-      onSubmit(searchInput.current.value, 1);
+      onSubmit(searchInput.current.value,1);
     };
   return (
     <Form onSubmit={handleSearch}>
