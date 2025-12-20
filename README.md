@@ -20,11 +20,13 @@ This project was built as part of my Techtonica learning journey to practice:
 5. Pagination buttons allow navigating through result pages
 6. Users can perform new searches without refreshing the page
 
+![Kapture 2025-12-19 at 19 22 31](https://github.com/user-attachments/assets/2eec69f6-2314-426a-8533-50c59a0270f1)
+
+
 # ✨ Features
 - **Search Functionality**: Users can search photos by keyword (e.g. dogs, nature, sunsets).
 - **Unsplash API Integration**: Fetches real-time image data from the Unsplash REST API.
 - **Component-Based UI Design**: The main application state and API logic are managed in the App component, while UI responsibilities are delegated to smaller presentational components.
-
 
 ## 🚀 How To Run
 1. **Clone the [repository](https://github.com/sylviajsy/react-game)**:
